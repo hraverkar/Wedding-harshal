@@ -245,8 +245,8 @@ function initMap() {
           })
         ],
         view: new ol.View({
-          center: ol.proj.fromLonLat([37.41, 8.82]),
-          zoom: 4
+          center: ol.proj.fromLonLat([76.3568299,21.8205346]),
+          zoom: 14
         })
       });
 }
@@ -261,8 +261,8 @@ function initBBSRMap() {
           })
         ],
         view: new ol.View({
-          center: ol.proj.fromLonLat([37.41, 8.82]),
-          zoom: 4
+          center: ol.proj.fromLonLat([76.3568299,21.8205346]),
+          zoom: 14
         })
       });
 }
