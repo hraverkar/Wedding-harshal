@@ -197,11 +197,10 @@ $(document).ready(function () {
             end: new Date('Nov 29, 2019 00:00'),
 
             // Event Address
-            address: 'Anand Parisar Khandwa, Madhya Pradesh - 450001',
+            address: 'Anand Parisar, Anand Nagar, Khandwa, Madhya Pradesh 450001, India',
 
             // Event Description
-            description: "We can't wait to see you on our big day. "+
-            +"For any queries or issues contact Mr. Harshal Raverkar at +91 9743420543."
+            description: "We can't wait to see you on our big day. For any queries or issues contact Mr. Harshal Raverkar at +91 9743420543."
         }
     });
 
