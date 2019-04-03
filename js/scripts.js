@@ -237,31 +237,34 @@ $(document).ready(function () {
 
 // Google map
 function initMap() {
-    var itc_kol = {lat: 21.8221255, lng: 76.3530713};
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 15,
-        center: itc_kol,
-        scrollwheel: false
-    });
-
-    var marker = new google.maps.Marker({
-        position: itc_kol,
-        map: map
-    });
+    var map = new ol.Map({
+        target: 'map-canvas',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          })
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([37.41, 8.82]),
+          zoom: 4
+        })
+      });
 }
 
 function initBBSRMap() {
-    var la_fiesta ={lat: 21.8221255, lng: 76.3530713}; 
-    var map = new google.maps.Map(document.getElementById('map-canvas'), {
-        zoom: 15,
-        center: la_fiesta,
-        scrollwheel: false
-    });
 
-    var marker = new google.maps.Marker({
-        position: la_fiesta,
-        map: map
-    });
+    var map = new ol.Map({
+        target: 'map-canvas',
+        layers: [
+          new ol.layer.Tile({
+            source: new ol.source.OSM()
+          })
+        ],
+        view: new ol.View({
+          center: ol.proj.fromLonLat([37.41, 8.82]),
+          zoom: 4
+        })
+      });
 }
 
 // alert_markup
