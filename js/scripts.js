@@ -120,7 +120,7 @@ $(document).ready(function () {
 
     $(function () {
 
-        $('a[href*=#]:not([href=#])').click(function () {
+        $('a[href*=\\#]:not([href=\\#])').click(function () {
             if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
 
                 var target = $(this.hash);
@@ -214,13 +214,13 @@ $(document).ready(function () {
 
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
 
-        if (MD5($('#invite_code').val()) !== 'b0e53b10c1f55ede516b240036b88f40'
-            && MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
+        if (MD5($('#invite_code').val()) !== 'b0e53b10c1f55ede516b240036b88f40' &&
+            MD5($('#invite_code').val()) !== '2ac7f43695eb0479d5846bb38eec59cc') {
             $('#alert-wrapper').html(alert_markup('danger', '<strong>Sorry!</strong> Your invite code is incorrect.'));
         } else {
-           // $.post('https://script.google.com/macros/s/AKfycbzUqz44wOat0DiGjRV1gUnRf4HRqlRARWggjvHKWvqniP7eVDG-/exec', data)
-            $.post('https://script.google.com/macros/s/AKfycbzVxnFI6t4vLhBULW2RWDKfVc-O98pdntigAAoYzQ/exec', data)    
-            .done(function (data) {
+            // $.post('https://script.google.com/macros/s/AKfycbzUqz44wOat0DiGjRV1gUnRf4HRqlRARWggjvHKWvqniP7eVDG-/exec', data)
+            $.post('https://script.google.com/macros/s/AKfycbzVxnFI6t4vLhBULW2RWDKfVc-O98pdntigAAoYzQ/exec', data)
+                .done(function (data) {
                     console.log(data);
                     $('#alert-wrapper').html('');
                     $('#rsvp-modal').modal('show');
@@ -241,15 +241,15 @@ function initMap() {
     var map = new ol.Map({
         target: 'map-canvas',
         layers: [
-          new ol.layer.Tile({
-            source: new ol.source.OSM()
-          })
+            new ol.layer.Tile({
+                source: new ol.source.OSM()
+            })
         ],
         view: new ol.View({
-          center: ol.proj.fromLonLat([76.3568299,21.8205346]),
-          zoom: 14
+            center: ol.proj.fromLonLat([76.3568299, 21.8205346]),
+            zoom: 14
         })
-      });
+    });
 }
 
 function initBBSRMap() {
@@ -257,15 +257,15 @@ function initBBSRMap() {
     var map = new ol.Map({
         target: 'map-canvas',
         layers: [
-          new ol.layer.Tile({
-            source: new ol.source.OSM()
-          })
+            new ol.layer.Tile({
+                source: new ol.source.OSM()
+            })
         ],
         view: new ol.View({
-          center: ol.proj.fromLonLat([76.3568299,21.8205346]),
-          zoom: 14
+            center: ol.proj.fromLonLat([76.3568299, 21.8205346]),
+            zoom: 14
         })
-      });
+    });
 }
 
 // alert_markup
@@ -361,7 +361,9 @@ var MD5 = function (string) {
     };
 
     function WordToHex(lValue) {
-        var WordToHexValue = "", WordToHexValue_temp = "", lByte, lCount;
+        var WordToHexValue = "",
+            WordToHexValue_temp = "",
+            lByte, lCount;
         for (lCount = 0; lCount <= 3; lCount++) {
             lByte = (lValue >>> (lCount * 8)) & 255;
             WordToHexValue_temp = "0" + lByte.toString(16);
@@ -380,12 +382,10 @@ var MD5 = function (string) {
 
             if (c < 128) {
                 utftext += String.fromCharCode(c);
-            }
-            else if ((c > 127) && (c < 2048)) {
+            } else if ((c > 127) && (c < 2048)) {
                 utftext += String.fromCharCode((c >> 6) | 192);
                 utftext += String.fromCharCode((c & 63) | 128);
-            }
-            else {
+            } else {
                 utftext += String.fromCharCode((c >> 12) | 224);
                 utftext += String.fromCharCode(((c >> 6) & 63) | 128);
                 utftext += String.fromCharCode((c & 63) | 128);
@@ -398,10 +398,22 @@ var MD5 = function (string) {
 
     var x = Array();
     var k, AA, BB, CC, DD, a, b, c, d;
-    var S11 = 7, S12 = 12, S13 = 17, S14 = 22;
-    var S21 = 5, S22 = 9, S23 = 14, S24 = 20;
-    var S31 = 4, S32 = 11, S33 = 16, S34 = 23;
-    var S41 = 6, S42 = 10, S43 = 15, S44 = 21;
+    var S11 = 7,
+        S12 = 12,
+        S13 = 17,
+        S14 = 22;
+    var S21 = 5,
+        S22 = 9,
+        S23 = 14,
+        S24 = 20;
+    var S31 = 4,
+        S32 = 11,
+        S33 = 16,
+        S34 = 23;
+    var S41 = 6,
+        S42 = 10,
+        S43 = 15,
+        S44 = 21;
 
     string = Utf8Encode(string);
 
