@@ -147,7 +147,7 @@ $(document).ready(function () {
 
     for (var i = 0; i < share_bar.length; i++) {
         var html = '<iframe allowtransparency="true" frameborder="0" scrolling="no"' +
-            'src="https://platform.twitter.com/widgets/tweet_button.html?url=' + encodeURIComponent(window.location) + '&amp;text=' + encodeURIComponent(document.title) + '&amp;via=I_LoveBengaluru&amp;hashtags=Harshal&Shefali&amp;count=horizontal"' +
+            'src="https://platform.twitter.com/widgets/tweet_button.html?url=' + encodeURIComponent(window.location) + '&amp;text=' + encodeURIComponent(document.title) + '&amp;via=hraverkar&amp;hashtags=HarshalShefali&amp;count=horizontal"' +
             'style="width:105px; height:21px;">' +
             '</iframe>' +
 
@@ -187,14 +187,14 @@ $(document).ready(function () {
             title: "Harshal and Shefali's Wedding",
 
             // Event start date
-            start: new Date('Nov 27, 2019 10:00'),
+            start: new Date('Feb 02, 2020 10:00'),
 
             // Event duration (IN MINUTES)
             // duration: 120,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('Nov 29, 2019 00:00'),
+            end: new Date('Feb 03, 2020 00:00'),
 
             // Event Address
             address: 'Anand Parisar, Anand Nagar, Khandwa, Madhya Pradesh 450001, India',
